@@ -7,8 +7,8 @@ export default function About() {
             <div className="flex">
                 <div className="flex-full">
                     <AboutCard
-                        title="UX/UI Design"
-                        icon="/icons/design.svg"
+                        title="Skills"
+                        icon="/icons/skills.PNG"
                         description="I create design  products with unique ideas."
                         projects={7} />
                     <AboutCard
@@ -27,18 +27,18 @@ export default function About() {
                     <h5 className="gray">Introduce</h5>
                     <h1 className="white">Hello, I&#39;m Atik</h1>
                     <h3 className="white">"Front-end development isn’t just about making things look good – it’s about crafting interfaces that are intuitive and work effortlessly for users."</h3>
-                    <p className="gray">I am a hard-working, honest, self-motivated Web Developer with knowledge in, React, Node, MongoDB, JavaScript, HTML, CSS, SASS, and mobile responsive web Development. I already do some projects.<br/><br/>
+                    <p className="gray">I am a hard-working, honest, self-motivated Web Developer with knowledge in, React, NextJS Node, MongoDB, JavaScript, HTML, CSS, SASS, and mobile responsive web Development. I already do some projects.<br/><br/>
                     I am naturally persevered, self-confident, quietly curios, innovative and constantly challenging my skills.</p>
                 </div>
             </div>
 
-            <div className="flex partners justify-space">
+            {/* <div className="flex partners justify-space">
                 <Image src="/images/partners/wallety.png" height={45} width={180} alt="wallety" />
                 <Image src="/images/partners/artisty.png" height={45} width={180} alt="artisty" />
                 <Image src="/images/partners/khedma-lik.png" height={45} width={180} alt="khedma-lik" />
                 <Image src="/images/partners/directy.png" height={45} width={180} alt="directy" />
                 <Image src="/images/partners/telefy.png" height={45} width={180} alt="telefy" />
-            </div>
+            </div> */}
         </section>
     )
 }
