@@ -17,10 +17,10 @@ export default function NavBar() {
                     <Link href="/#about">About Me</Link>
                 </li>
                 <li>
-                    <Link href="/#about">Project's</Link>
+                    <Link href="/#projects">Project's</Link>
                 </li>
                 <li>
-                    <Link href="/#about">Contact</Link>
+                    <Link href="/#contact">Contact</Link>
                 </li>
             </ul>
         </nav>

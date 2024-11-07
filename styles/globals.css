@@ -16,19 +16,19 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 0;
 }
 .dark-bg {
-  background-color: #25262A;
+  background-color: #1f4443;
 }
 .light-bg {
-  background-color: #2D2E32;
+  background-color: #113534;
 }
 .white {
   color: #FFFFFF;
 }
 .gray {
-  color: #777777;
+  color: #53d7d5;
 }
 .green {
-  color: #4dba87;
+  color: #6ed823e1;
 }
 .flex {
   display: flex;
@@ -48,10 +48,10 @@ button {
   border: none;
   border-radius: 0.2rem;
   padding: 0.5rem 1rem;
-  color: #2D2E32;
+  color: #131622;
   font-size: 0.8rem;
   font-weight: 600;
-  background-color: #4dba87;
+  background-color: #3fd6c7;
   cursor: pointer;
 }
 
