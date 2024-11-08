@@ -23,7 +23,13 @@ export default function About() {
                         projects={7} />
                 </div>
                 
-                
+                <div className="flex-full about-text">
+                    <h5 className="gray">Introduce</h5>
+                    <h1 className="white">Hello, I&#39;m Atik</h1>
+                    <h3 className="white">"Front-end development isn’t just about making things look good – it’s about crafting interfaces that are intuitive and work effortlessly for users."</h3>
+                    <p className="gray">I am a hard-working, honest, self-motivated Web Developer with knowledge in, React, NextJS Node, MongoDB, JavaScript, HTML, CSS, SASS, and mobile responsive web Development. I already do some projects.<br/><br/>
+                    I am naturally persevered, self-confident, quietly curios, innovative and constantly challenging my skills.</p>
+                </div>
             </div>
 
             {/* <div className="flex partners justify-space">
