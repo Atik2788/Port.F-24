@@ -5,7 +5,7 @@ export default function About() {
     return (
         <section id="about" className="dark-bg">
             <div className="flex">
-               {/*  <div className="flex-full">
+                <div className="flex-full">
                     <AboutCard
                         title="Skills"
                         icon="/icons/skills.PNG"
@@ -21,7 +21,7 @@ export default function About() {
                         icon="/icons/phone.svg"
                         description="I develop cross-platform mobile applications."
                         projects={7} />
-                </div> */}
+                </div>
                 
                 <div className="flex-full about-text">
                     <h5 className="gray">Introduce</h5>
