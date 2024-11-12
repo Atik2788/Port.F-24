@@ -49,7 +49,7 @@ export default function Header() {
             <Image
               className="pro-pic"
               src="/images/atik.jpg"
-              width={463}
+              width={450}
               height={450}
               alt="atik"
             />

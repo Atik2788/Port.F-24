@@ -53,7 +53,7 @@ export default function NavBar() {
   return (
     <nav className="flex light-bg justify-space">
       <div className="logo white flex_nav">
-        <Link href="/" className="nav_link nav__name">{displayedName}</Link>
+        <h1><Link href="/" className="nav_link nav__name">{displayedName}</Link></h1>
         <div className="hamburger" onClick={toggleMenu}>
           {/* Hamburger icon */}
           <div className="hamburger-icon">&#9776;</div>

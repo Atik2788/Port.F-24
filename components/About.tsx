@@ -31,25 +31,6 @@ export default function About() {
                 <Skills/>
 
             </div>
-
-{/*           <AboutCard
-            title="Skills"
-            icon="/icons/skills.PNG"
-            description="I create design  products with unique ideas."
-            projects={7}
-          />
-          <AboutCard
-            title="Web Design"
-            icon="/icons/code.svg"
-            description="I develop Front-End with coding super smooth."
-            projects={10}
-          />
-          <AboutCard
-            title="Mobile"
-            icon="/icons/phone.svg"
-            description="I develop cross-platform mobile applications."
-            projects={7}
-          /> */}
         </div>
       </div>
     </section>
