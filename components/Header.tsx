@@ -33,17 +33,25 @@ export default function Header() {
       <div className="header flex light-bg">
         <div>
           <button>Front-End Developer</button>
-          <h1 className="white">Talk is cheap.</h1>
-          <h1 className="white">Show me the code!</h1>
-          <p className="gray">
+          <h1 className="white slide__right">Talk is cheap.</h1>
+          <h1 className="white slide__left">Show me the code!</h1>
+          <p className="gray slide__bottom">
             I design and code beautiful simple things, and I love what I do.
           </p>
-          <a className="green" onClick={handleEmailClicked}>
-            Let&#39;s chat!
-          </a>
+          <div className="slide__bottom">
+            <a className="green slide__left" onClick={handleEmailClicked}>
+              Let&#39;s chat!
+            </a>
+          </div>
         </div>
         <div className="pro-pic-container">
-          <Image className="pro-pic" src="/images/atik.png" width={463} height={450} alt="atik" />
+          <Image
+            className="pro-pic"
+            src="/images/atik.jpg"
+            width={463}
+            height={450}
+            alt="atik"
+          />
         </div>
       </div>
       {isModalVisible && (

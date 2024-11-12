@@ -7,16 +7,11 @@ export default function Footer() {
 
     return (
         <footer className="light-bg flex justify-space">
-            <span className="white">Copyright © {year} <Link href="/">Blaiti</Link> - All rights reserved.</span>
+            <span className="white">Copyright © {year} <Link href="/">Atik</Link> - All rights reserved.</span>
             <ul className="flex">
                 <li>
-                    <a href="https://www.facebook.com/blaiti" target="_blank" rel="noreferrer">
+                    <a href="https://www.facebook.com/atik.ahmed.75054/" target="_blank" rel="noreferrer">
                         <Image src="/icons/facebook.svg" width={24} height={24} alt="facebook-icon" />
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.instagram.com/blaiti.codes" target="_blank" rel="noreferrer">
-                        <Image src="/icons/instagram.svg" width={24} height={24} alt="instagram-icon" />
                     </a>
                 </li>
                 <li>
@@ -25,7 +20,7 @@ export default function Footer() {
                     </a>
                 </li>
                 <li>
-                    <a href="https://github.com/blaiti" target="_blank" rel="noreferrer">
+                    <a href="https://github.com/atik2788" target="_blank" rel="noreferrer">
                         <Image src="/icons/github.svg" width={24} height={24} alt="github-icon" />
                     </a>
                 </li>

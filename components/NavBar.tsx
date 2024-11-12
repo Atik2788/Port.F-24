@@ -1,13 +1,34 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 
 export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [displayedName, setDisplayedName] = useState("");
+  const fullName = "Md. Atikur Rahman Shanta";
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
-    console.log("clicked");
   };
+
+
+  // Typewriter effect logic
+  useEffect(() => {
+    let currentIndex = 0;
+
+    const typeInterval = setInterval(() => {
+      if (currentIndex < fullName.length) {
+        setDisplayedName(fullName.slice(0, currentIndex + 1));
+        currentIndex++;
+      } else {
+        clearInterval(typeInterval); // Clear the interval when finished
+      }
+    }, 100); // Adjust the speed as needed
+
+    // Cleanup the interval on component unmount
+    return () => clearInterval(typeInterval);
+  }, []); // Empty dependency array to start the typing effect once
+
+  
 
   const navList = (
     <>
@@ -32,22 +53,20 @@ export default function NavBar() {
   return (
     <nav className="flex light-bg justify-space">
       <div className="logo white flex_nav">
-        <Link href="/" className="nav_link">Md. Atikur Rahman Shanta</Link>
+        <Link href="/" className="nav_link nav__name">{displayedName}</Link>
         <div className="hamburger" onClick={toggleMenu}>
           {/* Hamburger icon */}
           <div className="hamburger-icon">&#9776;</div>
         </div>
       </div>
 
-
-      {/* Conditionally render the menu based on screen size and state */}
       <div className="nav_list_div">
-        {/* {menuOpen && <ul className="flex white navList_small">{navList}</ul>} */}
-         <ul className={`flex white ${menuOpen === true ? 'navList_small_show': 'navList_small'}`}>{navList}</ul>
+        <ul className={`flex white ${menuOpen ? 'navList_small_show' : 'navList_small'}`}>
+          {navList}
+        </ul>
       </div>
 
       <ul className="flex white navList__big nav_style">{navList}</ul>
-
     </nav>
   );
 }

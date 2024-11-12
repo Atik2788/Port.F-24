@@ -1,24 +1,49 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const Skills = () => {
+  const skills = [
+    "HTML",
+    "CSS",
+    "SCSS",
+    "Bootstrap",
+    "Tailwind",
+    "JavaScript",
+    "React JS",
+    "Nest JS",
+    "MongoDB",
+    "Firebase",
+    "Node JS",
+    "Express JS",
+    "React Query",
+  ];
+  const [isActive, setActive] = useState(false);
+
+  useEffect(() => {
+    function showArrow() {
+      if (window.scrollY >= 120 ) {
+        setActive(true);
+        console.log('120')}
+      else{
+        setActive(false)
+      }
+    }
+
+    window.addEventListener("scroll", showArrow);
+
+    return () => {
+      window.addEventListener("scroll", showArrow);
+    };
+  }, []);
+
   return (
     <div className="skills_sec">
       <h1>Skills</h1>
-
       <div className="skills_name">
-        <h4>HTML</h4>
-        <h4>CSS</h4>
-        <h4>SCSS</h4>
-        <h4>Bootstrap</h4>
-        <h4>Tailwind</h4>
-        <h4>JavaScript</h4>
-        <h4>React JS</h4>
-        <h4>Nest JS</h4>
-        <h4>MongoDB</h4>
-        <h4>Firebase</h4>
-        <h4>Node JS</h4>
-        <h4>Express JS</h4>
-        <h4>React Query</h4>
+        {skills.map((skill, index) => (
+          <h4 key={index} className={isActive ? "slide__left": 'none'} style={{animationDelay: `${index * 0.2}s`}}>
+            {skill}
+          </h4>
+        ))}
       </div>
     </div>
   );
