@@ -42,7 +42,7 @@ export default function NavBar() {
         <Link href="/#skill">Skills</Link>
       </li>
       <li>
-        <Link href="/#projects">Project's</Link>
+        <Link href="/#projects">Project&rsquo;s</Link>
       </li>
       <li>
         <Link href="/#contact">Contact</Link>

@@ -10,9 +10,9 @@ export default function About() {
           <h5 className="gray">Introduce</h5>
           <h1 className="white">Hello, I&#39;m Atik</h1>
           <h3 className="white">
-            "Front-end development isn’t just about making things look good –
-            it’s about crafting interfaces that are intuitive and work
-            effortlessly for users."
+          &ldquo;Front-end development isn&rsquo;t just about making things look good –
+            it&rsquo;s about crafting interfaces that are intuitive and work
+            effortlessly for users.&rdquo;
           </h3>
           <p className="gray">
             I am a hard-working, honest, self-motivated Web Developer with
