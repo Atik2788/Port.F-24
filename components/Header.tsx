@@ -45,13 +45,15 @@ export default function Header() {
           </div>
         </div>
         <div className="pro-pic-container">
-          <Image
-            className="pro-pic"
-            src="/images/atik.jpg"
-            width={463}
-            height={450}
-            alt="atik"
-          />
+          <div className="pro-pic-ani">
+            <Image
+              className="pro-pic"
+              src="/images/atik.jpg"
+              width={463}
+              height={450}
+              alt="atik"
+            />
+          </div>
         </div>
       </div>
       {isModalVisible && (

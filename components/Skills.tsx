@@ -21,8 +21,7 @@ const Skills = () => {
   useEffect(() => {
     function showArrow() {
       if (window.scrollY >= 120 ) {
-        setActive(true);
-        console.log('120')}
+        setActive(true)}
       else{
         setActive(false)
       }

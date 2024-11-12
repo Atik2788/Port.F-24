@@ -81,14 +81,14 @@ nav .logo {
   font-size: 1.5rem;
   font-weight: 600;
 }
-.nav_style li{
+.nav_style li {
   list-style-type: none;
   margin-left: 3rem;
   font-size: 0.9rem;
   font-weight: 600;
 }
-.nav_style li:hover{
-color: #26c3c0e1;
+.nav_style li:hover {
+  color: #26c3c0e1;
 }
 
 .nav__name::after {
@@ -102,10 +102,6 @@ color: #26c3c0e1;
     opacity: 0;
   }
 }
-
-
-
-
 
 /* nav ul li {
   list-style-type: none;
@@ -138,7 +134,7 @@ color: #26c3c0e1;
 /* header */
 .header {
   justify-content: space-between;
-  padding: 1.1rem 5rem 0rem 5rem;
+  padding: 4rem 5rem 2rem 5rem;
 }
 .header h1 {
   margin: auto;
@@ -165,7 +161,7 @@ color: #26c3c0e1;
     transform: translateX(50%);
     opacity: 0;
   }
-  100%{
+  100% {
     transform: translateX(0%);
     opacity: 1;
   }
@@ -175,7 +171,7 @@ color: #26c3c0e1;
     transform: translateX(-50%);
     opacity: 0;
   }
-  100%{
+  100% {
     transform: translateX(0%);
     opacity: 1;
   }
@@ -185,34 +181,32 @@ color: #26c3c0e1;
     transform: translateY(200%);
     opacity: 0;
   }
-  100%{
+  100% {
     transform: translateY(0%);
     opacity: 1;
   }
 }
 
-.slide__right{
+.slide__right {
   opacity: 1;
   transform: translateX(50%);
-  animation: slideLeft .7s ease forwards;
+  animation: slideLeft 0.7s ease forwards;
 }
 
-.slide__left{
+.slide__left {
   opacity: 1;
   transform: translateX(50%);
   animation: slideRight 1s ease forwards;
 }
 
-.slide__bottom{
+.slide__bottom {
   opacity: 1;
   transform: translateY(200%);
   animation: slideBottom 0.7s ease forwards;
 }
-.none{
+.none {
   display: none;
 }
-
-
 
 .header a {
   font-size: 1.2rem;
@@ -222,12 +216,52 @@ color: #26c3c0e1;
   cursor: pointer;
 }
 
-.pro-pic{
-  border: 1px solid black;
+
+/* Container styling for profile image reveal */
+.pro-pic-container {
+  position: relative;
+  width: 450px;
+  height: 450px;
+  overflow: hidden;
+}
+
+/* Apply the reveal animation to the container */
+.pro-pic-ani {
+  width: 100%;
+  height: 100%;
+  animation: revealImage 2s ease forwards;
+  clip-path: inset(0 50% 0 50%); /* Start as a narrow vertical line */
+}
+
+/* Round the image */
+.pro-pic {
   border-radius: 50%;
 }
 
+/* Animation for revealing the image */
+@keyframes revealImage {
+  0% {
+    clip-path: inset(0 50% 0 50%); /* Narrow vertical line */
+  }
+  100% {
+    clip-path: inset(0 0 0 0); /* Fully revealed */
+  }
+}
 
+
+
+
+
+@keyframes showBig {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
 
 /* About */
 .about-card {
@@ -283,7 +317,6 @@ color: #26c3c0e1;
   margin-top: 3rem;
 }
 .skills_name {
-
   display: grid;
   grid-template-columns: auto auto auto auto;
   margin-top: 2rem;
@@ -363,8 +396,8 @@ footer ul li {
   }
 
   /* Condition display */
-  
-  .nav_list_div{
+
+  .nav_list_div {
     position: relative;
   }
 
@@ -379,7 +412,7 @@ footer ul li {
     100% {
       right: -75px; /* Settle to final position */
     }
-  }  
+  }
 
   .navList_small {
     position: absolute;
@@ -397,18 +430,17 @@ footer ul li {
     margin: 0;
     animation: bounce-in 0.6s ease-in-out; /* Trigger the bounce animation */
   }
-  
-  .navList_small_show li{
-    padding: 1vh 3vh;
-  }
-  
-  .navList_small li{
+
+  .navList_small_show li {
     padding: 1vh 3vh;
   }
 
+  .navList_small li {
+    padding: 1vh 3vh;
+  }
 
-/* Hover effect for mobile menu items */
-  .navList_small_show li:hover{
+  /* Hover effect for mobile menu items */
+  .navList_small_show li:hover {
     background-color: #113534;
   }
 

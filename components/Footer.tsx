@@ -15,7 +15,7 @@ export default function Footer() {
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com/in/skanderblaiti" target="_blank" rel="noreferrer">
+                    <a href="https://www.linkedin.com/in/md-atikur-rahman-shanta-88a182241/" target="_blank" rel="noreferrer">
                         <Image src="/icons/linkedin.svg" width={24} height={24} alt="linkedin-icon" />
                     </a>
                 </li>
@@ -25,9 +25,9 @@ export default function Footer() {
                     </a>
                 </li>
                 <li>
-                    <a href="https://youtube.com/Blaiti" target="_blank" rel="noreferrer">
+                    {/* <a href="https://youtube.com/Blaiti" target="_blank" rel="noreferrer">
                         <Image src="/icons/youtube.svg" width={24} height={24} alt="youtube-icon" />
-                    </a>
+                    </a> */}
                 </li>
             </ul>
         </footer>
