@@ -11,6 +11,7 @@ export default function NavBar() {
   };
 
 
+
   // Typewriter effect logic
   useEffect(() => {
     let currentIndex = 0;
@@ -60,8 +61,10 @@ export default function NavBar() {
         </div>
       </div>
 
-      <div className="nav_list_div_small">
-        <ul className={`flex white ${menuOpen ? 'navList_small_show' : 'navList_small'}`}>
+      {/* <div className="nav_list_div_small"> */}
+      <div className={'nav_list_div_small'}>
+        {/* <ul className={`flex white ${menuOpen ? '' : ''}`}> */}
+        <ul className={`flex white ${menuOpen ? 'navList_small_show' : 'navList_small_hide'}`}>
           {navList}
         </ul>
       </div>

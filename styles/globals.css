@@ -127,7 +127,7 @@ nav .logo {
   display: flex;
 }
 
-.navList_small {
+.navList_small_hide {
   display: none;
 }
 .navList_small_show {
@@ -371,7 +371,7 @@ footer ul li {
   }
   
   nav .logo {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 600;
   }
   
@@ -391,7 +391,7 @@ footer ul li {
   .hamburger-icon {
     position: absolute;
     top: -33px;
-    right: -280px;
+    right: -250px;
   }
   /* Hide the menu by default and show it when .show-menu is active */
 
@@ -418,6 +418,14 @@ footer ul li {
     /* padding: 0; */
   }
 
+  .css_show {
+    display: block; /* or flex, based on your design */
+  }
+  
+  .css_hide {
+    display: none;
+  }
+
   /* Condition display */
 
   .nav_list_div_small {
@@ -427,7 +435,7 @@ footer ul li {
   /*Keyframe for bounce*/
   @keyframes bounce-in {
     0% {
-      right: -200px; /* Start off-screen */
+      right: -240px; /* Start off-screen */
     }
     70% {
       right: -90px; /* Go slightly past the final position */
@@ -437,22 +445,38 @@ footer ul li {
     }
   }
 
-  .navList_small {
+  .navList_small_hide {
     position: absolute;
     display: flex;
     top: 22px;
-    right: -250px;
+    right: -240px;
     margin: 0;
+    visibility: hidden;  /* Initially hide the element */
     transition: right 0.5s ease-in-out; /* Smooth transition */
+
   }
+
   .navList_small_show {
     position: absolute;
     display: flex;
     top: 22px;
     right: -105px;
     margin: 0;
-    animation: bounce-in 0.6s ease-in-out; /* Trigger the bounce animation */
+    animation: bounce-in 0.6s ease-in-out;
+
+    visibility: visible; /* Make the element visible */
+    transition: right 0.5s ease-in-out; /* Animate right */
   }
+
+  /**** use this for the solving: when .navList_small_hide its hidding in time, the transition dont work, thats why using visible and this ****/
+.navList_small_show,
+.navList_small_hide {
+  transition: visibility 0.7s linear 0s, right 0.5s ease-in-out;
+}
+.navList_small_hide {
+  visibility: hidden; /* Hide after transition completes */
+}
+
 
   .nav_list_div_small ul li {
     padding: 1vh 3vh;
