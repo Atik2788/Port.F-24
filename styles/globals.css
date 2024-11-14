@@ -126,6 +126,7 @@ nav .logo {
 .navList__big {
   display: flex;
 }
+
 .navList_small {
   display: none;
 }
@@ -356,12 +357,7 @@ footer ul li {
     align-items: center;
     justify-content: center;
   }
-  /* .nav_link {
-    width: 95%;
-    font-size: 1rem !important;
-  } */
 
-  /* Header */
 
   .flex_nav {
     display: block;
@@ -375,7 +371,7 @@ footer ul li {
   }
   
   nav .logo {
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-weight: 600;
   }
   
@@ -394,8 +390,8 @@ footer ul li {
 
   .hamburger-icon {
     position: absolute;
-    top: -30px;
-    right: -250px;
+    top: -33px;
+    right: -280px;
   }
   /* Hide the menu by default and show it when .show-menu is active */
 
@@ -424,7 +420,7 @@ footer ul li {
 
   /* Condition display */
 
-  .nav_list_div {
+  .nav_list_div_small {
     position: relative;
   }
 
@@ -434,18 +430,18 @@ footer ul li {
       right: -200px; /* Start off-screen */
     }
     70% {
-      right: -45px; /* Go slightly past the final position */
+      right: -90px; /* Go slightly past the final position */
     }
     100% {
-      right: -75px; /* Settle to final position */
+      right: -105px; /* Settle to final position */
     }
   }
 
   .navList_small {
     position: absolute;
-    display: none;
+    display: flex;
     top: 22px;
-    right: -220px;
+    right: -250px;
     margin: 0;
     transition: right 0.5s ease-in-out; /* Smooth transition */
   }
@@ -453,18 +449,15 @@ footer ul li {
     position: absolute;
     display: flex;
     top: 22px;
-    right: -75px;
+    right: -105px;
     margin: 0;
     animation: bounce-in 0.6s ease-in-out; /* Trigger the bounce animation */
   }
 
-  .navList_small_show li {
+  .nav_list_div_small ul li {
     padding: 1vh 3vh;
   }
 
-  .navList_small li {
-    padding: 1vh 3vh;
-  }
 
   /* Hover effect for mobile menu items */
   .navList_small_show li:hover {

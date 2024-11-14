@@ -53,14 +53,14 @@ export default function NavBar() {
   return (
     <nav className="flex light-bg justify-space">
       <div className="logo white flex_nav">
-        <h1><Link href="/" className="nav_link nav__name">{displayedName}</Link></h1>
+        <h1><Link href="/" className="nav__name">{displayedName}</Link></h1>
         <div className="hamburger" onClick={toggleMenu}>
           {/* Hamburger icon */}
           <div className="hamburger-icon">&#9776;</div>
         </div>
       </div>
 
-      <div className="nav_list_div">
+      <div className="nav_list_div_small">
         <ul className={`flex white ${menuOpen ? 'navList_small_show' : 'navList_small'}`}>
           {navList}
         </ul>
