@@ -1,0 +1,548 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto Mono";
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+.dark-bg {
+  background-color: #1f4443;
+}
+.bg-dark-deep {
+  background-color: #0e2e2a;
+}
+.light-bg {
+  background-color: #113534;
+}
+.white {
+  color: #ffffff;
+}
+.gray {
+  color: #53d7d5;
+}
+.green {
+  color: #6ed823e1;
+}
+.flex {
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  /* gap: 5rem; */
+}
+
+.flex_nav {
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+}
+
+
+.flex-full {
+  flex: 1;
+}
+
+.justify-space {
+  justify-content: space-between;
+}
+section {
+  /* padding: 5rem 5rem; */
+}
+.button {
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0.5rem 1rem;
+  color: #131622;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background-color: #3fd6c7;
+  cursor: pointer;
+}
+
+/* Header */
+nav {
+  padding: 1.1rem 5rem;
+}
+
+.flex_nav Link{
+  width: 80%;
+}
+
+
+nav .logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.nav_style li {
+  list-style-type: none;
+  margin-left: 3rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.nav_style li:hover {
+  color: #26c3c0e1;
+}
+
+
+.nav__name::after {
+  content: "|";
+  animation: blink 0.6s step-end infinite;
+  margin-left: 5px;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Hide the hamburger icon by default */
+.hamburger {
+  display: none;
+  padding-left: 4rem;
+}
+
+.hamburger-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.navList__big {
+  display: flex;
+}
+
+.navList_small_hide {
+  display: none;
+}
+.navList_small_show {
+  display: none;
+}
+
+/* header */
+.header {
+  /* justify-content: space-between; */
+  /* padding: 4rem 5rem 2rem 5rem; */
+}
+.header h1 {
+  margin: auto;
+  font-size: 3rem;
+  font-weight: 500;
+}
+.header p {
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* animation ************************************/
+/* animation ************************************/
+.header button {
+  cursor: text;
+  margin-bottom: 1.5rem;
+  transform: translateX(50%);
+  animation: slideRight 0.5s ease forwards;
+}
+@keyframes slideRight {
+  0% {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+@keyframes slideLeft {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+@keyframes slideBottom {
+  0% {
+    transform: translateY(200%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.slide__right {
+  opacity: 1;
+  transform: translateX(50%);
+  animation: slideLeft 0.7s ease forwards;
+}
+
+.slide__left {
+  opacity: 1;
+  transform: translateX(50%);
+  animation: slideRight 1s ease forwards;
+}
+
+.slide__bottom {
+  opacity: 1;
+  transform: translateY(200%);
+  animation: slideBottom 0.7s ease forwards;
+}
+.none {
+  display: none;
+}
+
+.header a {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+/* Container styling for profile image reveal */
+.pro-pic-container {
+  position: relative;
+  width: 450px;
+  height: 450px;
+  overflow: hidden;
+}
+
+/* Apply the reveal animation to the container */
+.pro-pic-ani {
+  width: 100%;
+  height: 100%;
+  animation: revealImage 2s ease forwards;
+  clip-path: inset(0 50% 0 50%); /* Start as a narrow vertical line */
+}
+
+/* Round the image */
+.pro-pic {
+  border-radius: 50%;
+}
+
+/* Animation for revealing the image */
+@keyframes revealImage {
+  0% {
+    clip-path: inset(0 50% 0 50%); /* Narrow vertical line */
+  }
+  100% {
+    clip-path: inset(0 0 0 0); /* Fully revealed */
+  }
+}
+
+
+
+
+
+@keyframes showBig {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+/* About */
+.about-card {
+  width: 90%;
+  /* padding: 3rem; */
+  margin-top: 0.5em;
+  border-radius: 0.3rem;
+}
+.about-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+.about-card p {
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.about-card span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+.about-text h1 {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  font-size: 2rem;
+}
+.about-text h3 {
+  margin-bottom: 1rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+  font-style: italic;
+  text-align: justify;
+}
+.about-text p {
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: justify;
+}
+.partners {
+  /* padding-top: 5rem; */
+}
+
+/*  Skills Sec */
+.skills_sec {
+  /* margin-left: 5rem; */
+}
+.skills_sec h1 {
+  color: white;
+  /* margin-top: 3rem; */
+}
+.skills_name {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  margin-top: 2rem;
+  gap: 1rem;
+  color: #3fd6c7;
+}
+.skills_name h4 {
+  opacity: 0;
+  border: 1px solid #6ed823e1;
+  border-radius: 5px;
+  /* padding: 0.3rem 1rem; */
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  padding: 2rem 5rem;
+}
+footer span {
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+footer ul li {
+  list-style-type: none;
+  margin-left: 1rem;
+}
+
+
+/* --------- Responsive Design --------- */
+/* --------- Responsive Design --------- */
+@media (max-width: 768px) {
+  .flex {
+    /* row-gap: 2rem; */
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+  }
+
+
+  .flex_nav {
+    display: block;
+    /* align-items: center; */
+    /* justify-content: space-between; */
+  }
+
+
+  .flex_nav Link{
+    width: 100%;
+  }
+  
+  nav .logo {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  nav {
+    /* padding: 1rem 2rem; */
+    flex-direction: row !important;
+    justify-content: space-between !important;
+  }
+
+  /* Show the hamburger icon only on smaller screens */
+  .hamburger {
+    position: relative;
+    display: block;
+    width: 5%;
+  }
+
+  .hamburger-icon {
+    position: absolute;
+    top: -33px;
+    right: -250px;
+  }
+  /* Hide the menu by default and show it when .show-menu is active */
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    width: 25vh;
+    /* row-gap: 1rem; */
+    background-color: #0e2221;
+    /* padding: 1rem 0; */
+    position: absolute;
+    /* top: 10%; */
+    /* left: 60%; */
+    right: 0%;
+    /* width: 30%; */
+    text-align: center;
+    justify-content: center;
+    border-radius: 5px;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: left;
+    /* padding: 0; */
+  }
+
+  .css_show {
+    display: block; /* or flex, based on your design */
+  }
+  
+  .css_hide {
+    display: none;
+  }
+
+  /* Condition display */
+
+  .nav_list_div_small {
+    position: relative;
+  }
+
+  /*Keyframe for bounce*/
+  @keyframes bounce-in {
+    0% {
+      right: -240px; /* Start off-screen */
+    }
+    70% {
+      right: -90px; /* Go slightly past the final position */
+    }
+    100% {
+      right: -105px; /* Settle to final position */
+    }
+  }
+
+  .navList_small_hide {
+    position: absolute;
+    display: flex;
+    top: 22px;
+    right: -240px;
+    margin: 0;
+    visibility: hidden;  /* Initially hide the element */
+    transition: right 0.5s ease-in-out; /* Smooth transition */
+
+  }
+
+  .navList_small_show {
+    position: absolute;
+    display: flex;
+    top: 22px;
+    right: -105px;
+    margin: 0;
+    animation: bounce-in 0.6s ease-in-out;
+
+    visibility: visible; /* Make the element visible */
+    transition: right 0.5s ease-in-out; /* Animate right */
+  }
+
+  /**** use this for the solving: when .navList_small_hide its hidding in time, the transition dont work, thats why using visible and this ****/
+.navList_small_show,
+.navList_small_hide {
+  transition: visibility 0.7s linear 0s, right 0.5s ease-in-out;
+}
+.navList_small_hide {
+  visibility: hidden; /* Hide after transition completes */
+}
+
+
+  .nav_list_div_small ul li {
+    padding: 1vh 3vh;
+  }
+
+
+  /* Hover effect for mobile menu items */
+  .navList_small_show li:hover {
+    background-color: #113534;
+  }
+
+  .navList__big {
+    display: none;
+  }
+
+  /* Header */
+  .header {
+    /* padding: 2rem 2rem 0rem 2rem; */
+  }
+
+  .header h1 {
+    margin: auto;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  section {
+    /* padding: 1rem 2rem; */
+  }
+  .copyEmail_modal {
+    top: 62% !important;
+  }
+  .pro-pic-container {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    overflow: hidden;
+    margin: 2rem 0;
+  }
+
+
+  /* About */
+  .about-card {
+    width: 100%;
+  }
+  .about-card div {
+    flex-direction: row !important;
+    justify-content: space-between !important;
+  }
+  /* skills */
+  .skills_sec {
+    margin-left: 0 !important;
+  }
+  .skills_name {
+    grid-template-columns: auto auto auto !important;
+  }
+  /* Footer */
+  footer ul {
+    column-gap: 1rem;
+    flex-direction: row !important;
+  }
+  footer ul li {
+    margin-left: 0;
+  }
+}
