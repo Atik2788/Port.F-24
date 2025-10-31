@@ -6,8 +6,8 @@ import NavBar from "./NavBar";
 export default function Header() {
   const [isModalVisible, setModalVisible] = useState(false);
 
-  // Email copy function
-  const handleEmailClicked = (e: any) => {
+  // Whats Number copy function
+  const handleWhatsAppClicked = (e: any) => {
     e.preventDefault();
 
     navigator.clipboard
@@ -23,6 +23,21 @@ export default function Header() {
       });
   };
 
+
+  const handleOpenWhatsApp = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  e.preventDefault();
+
+  const phoneNumber = "8801303012788"; 
+  const message = encodeURIComponent("Hello Atik! I want to discuss a project with you.");
+
+  // WhatsApp API URL
+  const whatsappURL = `https://wa.me/${phoneNumber}?Hi, I am Atik, thank you for your text, I will response you as soon as possible=${message}`;
+
+  // Browser বা mobile এ WhatsApp খুলবে
+  window.open(whatsappURL, "_blank");
+};
+
+
   return (
     <header className="light-bg px-6 md:px-20 py-12">
       <NavBar />
@@ -36,7 +51,7 @@ export default function Header() {
           </p>
           <div className="slide__bottom gap-4">
             {/* Email button */}
-            <a className="green slide__left cursor-pointer" onClick={handleEmailClicked}>
+            <a className="green slide__left cursor-pointer" onClick={handleOpenWhatsApp}>
               Let&#39;s chat!
             </a>
 

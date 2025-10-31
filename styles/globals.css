@@ -546,3 +546,12 @@ footer ul li {
     margin-left: 0;
   }
 }
+
+.flexUi{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flexUix{
+  display: flex;
+}
