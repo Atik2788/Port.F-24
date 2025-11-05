@@ -15,7 +15,7 @@ const skills = [
   "React Query",
   "Redux Toolkit",
   "Framer Motion",
-  "Shadcn"
+  "Shadcn",
 
   // ⚙️ Backend
   "Node JS",
