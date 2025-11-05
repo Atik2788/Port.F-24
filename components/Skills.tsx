@@ -1,21 +1,44 @@
 import React, { useEffect, useState } from "react";
 
 const Skills = () => {
-  const skills = [
-    "HTML",
-    "CSS",
-    "SCSS",
-    "Bootstrap",
-    "Tailwind",
-    "JavaScript",
-    "React JS",
-    "Nest JS",
-    "MongoDB",
-    "Firebase",
-    "Node JS",
-    "Express JS",
-    "React Query",
-  ];
+const skills = [
+  // 🧱 Frontend
+  "HTML",
+  "CSS",
+  "SCSS",
+  "Bootstrap",
+  "Tailwind CSS",
+  "JavaScript (ES6+)",
+  "TypeScript",
+  "React JS",
+  "Next JS",
+  "React Query",
+  "Redux Toolkit",
+  "Framer Motion",
+  "Shadcn"
+
+  // ⚙️ Backend
+  "Node JS",
+  "Express JS",
+  "Nest JS",
+  "MongoDB",
+  "Mongoose",
+  "REST API",
+  "JWT Authentication",
+  "ZOD",
+
+  // ☁️ Tools & Others
+  "Firebase",
+  "Git & GitHub",
+  "VS Code",
+  "Postman",
+  "Vercel",
+  "Netlify",
+  "Render",
+  "Linux (Basic)",
+  
+];
+
   const [isActive, setActive] = useState(false);
 
   useEffect(() => {
