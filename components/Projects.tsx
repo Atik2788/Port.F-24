@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { ProjectsDivMobile } from "./ProjectDivMobile";
-import { ProjectDivPC } from "./ProjectDivPC";
 import { ProjectsModal } from "./ProjectsModal";
-import {projects} from '../data/projectsData'
+import { projects } from '../data/projectsData'
 import { Project } from "../type/types";
+import ProjectDivPC from "./ProjectDivPC";
 
 
 export const Projects: React.FC = () => {
@@ -65,38 +65,25 @@ export const Projects: React.FC = () => {
 
 
   return (
-    <section id="projects" className="w-full h-3/5 bg-dark-deep">
-      {/* Desktop View */}
-      <div className="hidden lg:flex md:flex relative justify-center items-center p-8 overflow-hidden">
-        {/* Global arrows */}
-        <button
-          onClick={prevProject}
-          className="absolute left-2 text-4xl z-20 hover:text-gray-300 text-black bg-[#3fd6c7] rounded-full px-3 py-1"
-        >
-          &#60;
-        </button>
-        <button
-          onClick={nextProject}
-          className="absolute right-2 text-4xl z-20 hover:text-gray-300 text-black bg-[#3fd6c7] rounded-full px-3 py-1"
-        >
-          &#62;
-        </button>
+    <section id="projects" className="w-full min-h-screen bg-dark-deep overflow-visible">
 
-        <div className="relative w-full flex justify-center overflow-hidden">
-          <div
-            className="flex transition-transform duration-700 ease-in-out"
-            style={{ transform: `translateX(${offset + 500}px)` }}
-          >
+
+        {/* Card Section */}
+        <div className="hidden lg:flex md:flex relative justify-center items-center p-8 overflow-visible">
+          {/* Arrows */}
+            
+          {/* Floating Cards */}
+          <div className="overflow-visible w-full">
             <ProjectDivPC
               projects={projects}
-              currentIndex={currentIndex}
-              currentImageIndex={currentImageIndex}
+              // currentIndex={currentIndex}
+              // currentImageIndex={currentImageIndex}
               onViewMore={openModal}
             ></ProjectDivPC>
-
           </div>
         </div>
-      </div>
+      {/* </div> */}
+
 
 
       {/* Mobile View */}
@@ -117,5 +104,7 @@ export const Projects: React.FC = () => {
 
 
     </section>
+
+
   );
 };
