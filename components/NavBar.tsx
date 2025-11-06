@@ -33,7 +33,7 @@ export default function NavBar() {
 
   const navList = (
     <>
-      <li className="green">
+      <li className="">
         <Link href="/">Home</Link>
       </li>
       <li>
