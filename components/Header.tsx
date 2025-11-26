@@ -76,7 +76,7 @@ export default function Header() {
           <div className="pro-pic-ani">
             <Image
               className="pro-pic"
-              src="/images/atik.jpg"
+              src="https://res.cloudinary.com/dufa9g0d5/image/upload/v1764172462/atik_pro_t5uhhc.jpg"
               width={450}
               height={450}
               alt="atik"
